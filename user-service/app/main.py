@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-
+# CI trigger: SIT722 8.1P pipeline demonstration
 
 def initialise_database() -> None:
     maximum_attempts = 10
