@@ -82,3 +82,4 @@ def health_check() -> dict[str, str]:
         "status": "healthy",
         "service": "course-service",
     }
+# trigger CI - week09 infra
