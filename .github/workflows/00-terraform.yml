@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - 'terraform/**'
+      - '.github/workflows/00-terraform.yml'
   pull_request:
     branches: [main]
     paths:
       - 'terraform/**'
+      - '.github/workflows/00-terraform.yml'
   workflow_dispatch: {}
 
 env:
@@ -47,7 +49,6 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -no-color -out=tfplan
-        continue-on-error: true
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
